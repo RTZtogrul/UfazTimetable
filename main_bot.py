@@ -3,6 +3,8 @@ import telebot as tl
 import datetime as dt
 import pytz
 import xml.etree.ElementTree as ET
+from secret import secret
+
 
 
 
@@ -10,17 +12,17 @@ import xml.etree.ElementTree as ET
 # #server
 # way =  r"/root/Timetable/220328_1518_2022_2540.xml"
 # path = r"/root/Timetable/groups.json"
-# token='5193810359:AAGL-1z8yCuv9n3vVoxaspCvTh_lCtoxwXk'
+# token=secret
 
 #FATULLA
 # way =  r"C:\Users\bashi\Desktop\Timetable\220328_1518_2022_2540.xml"
 # path = r"C:\Users\bashi\Desktop\Timetable\groups.json"
-# token='5193810359:AAGL-1z8yCuv9n3vVoxaspCvTh_lCtoxwXk'
+# token=secret
 
 # TOGHRUL   
 way =  r"C:\Users\Togrul\Desktop\This one\220223_0930_21_22_v1359.xml"
 path = r"C:\Users\User\Desktop\This one\groups.json"
-token='5193810359:AAGL-1z8yCuv9n3vVoxaspCvTh_lCtoxwXk'
+token=secret
 
 
 class Card:
