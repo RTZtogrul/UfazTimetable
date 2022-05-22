@@ -1,7 +1,8 @@
+from dataclasses import dataclass
 import json,math
 import telebot as tl
 import datetime as dt
-import pytz
+# import pytz
 import xml.etree.ElementTree as ET
 from secret import secret
 
@@ -24,7 +25,7 @@ way =  r"C:\Users\Togrul\Desktop\This one\220223_0930_21_22_v1359.xml"
 path = r"C:\Users\User\Desktop\This one\groups.json"
 token=secret
 
-
+@dataclass
 class Card:
 
     def __init__(self, lessonid: str, classroomids: str, period: int, weeks: str, days: str) -> None:
@@ -43,7 +44,7 @@ class Card:
         self.teacher_name = ""
         
     
-
+@dataclass
 class Lesson:
     
     def __init__(self,id: str, subjectid: str,teacherids:str,groupids:str) -> None:
@@ -51,7 +52,9 @@ class Lesson:
         self.subjectid = subjectid
         self.teacherids = teacherids
         self.groupids = groupids
-
+        
+        
+@dataclass
 class Teacher:
 
 
@@ -59,18 +62,25 @@ class Teacher:
         self.id = id
         self.name = name
 
+
+
+@dataclass
 class Subject:
 
     def __init__(self, id: str, name: str) -> None:
         self.id = id
         self.name = name
 
+
+@dataclass
 class Classroom:
 
     def __init__(self, id: str, name: int) -> None:
         self.id = id
         self.name = name
 
+
+@dataclass
 class Weeksdef:
 
 
@@ -80,6 +90,8 @@ class Weeksdef:
         self.short = short
         self.weeks = weeks
 
+
+@dataclass
 class Daysdef:
 
 
@@ -88,6 +100,8 @@ class Daysdef:
         self.name = name
         self.days = days
 
+
+@dataclass
 class Group:
 
     def __init__(self, id: str, name: str, classid: str) -> None:
@@ -95,6 +109,8 @@ class Group:
         self.name = name
         self.classid = classid
 
+
+@dataclass
 class Class:
 
     def __init__(self, id: str, name: str) -> None:
@@ -209,6 +225,9 @@ def initialization(way):
 
 
         """ Transformation of Information """
+
+        
+
 
         for i in range(len(list_of_cards)):
             for j in range(len(list_of_lessons)):
